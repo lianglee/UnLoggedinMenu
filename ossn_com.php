@@ -9,8 +9,8 @@
  * @link      https://www.opensource-socialnetwork.org/
  */
 function unloggedin_users_menu() {
-			//if(!ossn_isLoggedin()){
-				ossn_extend_view('ossn/site/head', 'unloggedinmenu/head');
-		//	}
+		if(!ossn_isLoggedin()){
+			ossn_extend_view('ossn/site/head', 'unloggedinmenu/head');
+		}
 }
 ossn_register_callback('ossn', 'init', 'unloggedin_users_menu');
